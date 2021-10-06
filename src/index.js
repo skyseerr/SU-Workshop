@@ -1,10 +1,12 @@
 const express = require('express');
 
-const initHandlebars = require('./config/handlebars');
+// const initHandlebars = require('./config/handlebars');
 
 const app = express();
 
-initHandlebars(app);
+require('./config/handlebars')(app);
+
+// initHandlebars(app); or require above
 
 app.all('/', (req, res) => {
     res.render('index');
