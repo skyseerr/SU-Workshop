@@ -1,6 +1,6 @@
 class Cube {
 
-    static cubes = [
+    static #cubes = [
         {
             name: 'Mirror Cube',
             description: 'Some description',
@@ -17,11 +17,11 @@ class Cube {
     }
 
     static getAll() { 
-        return Cube.cubes.slice();
+        return Cube.#cubes.slice();
     }
 
     static add(cube) {
-        Cube.cubes.push(cube);
+        Cube.#cubes.push(cube);
     }
 }
 
