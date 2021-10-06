@@ -5,13 +5,19 @@ const cubeServise = require('../services/cubeService');
 const router = express.Router();
 
 const createCubePage = (req, res) => {
+    
+    let cubes = cubeServise.getAll();
+
+    console.log(cubes);
+
     res.render('create');
+
 };
 
 const createCube = (req, res) => {
 
     console.log(req.body);
-    
+
     let {name, description, imageUrl, difficulty} = req.body;
 
     cubeServise.create(name, description, imageUrl, difficulty)

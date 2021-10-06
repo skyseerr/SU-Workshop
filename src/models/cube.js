@@ -6,3 +6,5 @@ class Cube {
         this.difficulty = difficulty;
     }
 }
+
+module.exports = Cube;
