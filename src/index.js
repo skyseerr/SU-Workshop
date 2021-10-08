@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
-const routes = require('./routes');
 
+const routes = require('./routes');
+const confing = require('./config/config.json')[process.env.NODE_ENV || 'development'];
 const app = express();
 
 app.use(express.urlencoded({extended: true}));
@@ -13,4 +14,4 @@ app.use(routes);
 
 
 
-app.listen(5000, console.log.bind(console, 'Application is running on http://localhost:5000'));
+app.listen(confing.PORT, console.log.bind(console, `Application is running on http://localhost:${confing.PORT}`));

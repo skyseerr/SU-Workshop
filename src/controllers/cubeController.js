@@ -22,7 +22,7 @@ const createCube = (req, res) => {
 
     cubeServise.create(name, description, imageUrl, difficulty)
 
-    res.redirect('/cube/create');
+    res.redirect('/');
 };
 
 const cubeDeateils = (req, res) => {
