@@ -1,6 +1,5 @@
 const express = require('express');
 const cubeServise = require('../services/cubeService');
-const cubeService = require('../services/cubeService');
 
 const router = express.Router();
 
@@ -17,4 +16,5 @@ const about = (req, res) =>{
 
 router.get('/', home);
 router.get('/about', about);
+
 module.exports = router;
