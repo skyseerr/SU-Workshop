@@ -1,5 +1,4 @@
 const express = require('express');
-const { serach } = require('../services/cubeService');
 const cubeServise = require('../services/cubeService');
 
 const router = express.Router();
