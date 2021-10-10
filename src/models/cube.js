@@ -16,7 +16,7 @@ const cubeSchema = new mongoose.Schema({
         required: true,
         // validate: [/^https?:\/\//i, 'Invalid image url!']
         validate: {
-            validator: function(value){
+            validator: function (value) {
                 return /^https?:\/\//i.test(value);
             },
             message: (props) => `Image Url ${props.value} is invalid`
@@ -27,7 +27,13 @@ const cubeSchema = new mongoose.Schema({
         required: true,
         min: 1,
         max: 5,
-    }
+    },
+    accessories: [
+        {
+            type: mongoose.Types.ObjectId,
+            ref: 'Accessory'
+        }
+    ]
 
 });
 
