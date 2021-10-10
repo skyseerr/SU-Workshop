@@ -6,7 +6,7 @@ const getAll = () => {
     return cubes;
 }
 
-const getOne = (id) => Cube.findById(id);
+const getOne = (id) => Cube.findById(id).lean();
 
 const create = (name, description, imageUrl, difficulty) => {
 
