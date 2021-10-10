@@ -8,7 +8,7 @@ const router = express.Router();
 
 const createCubePage = (req, res) => {
 
-    res.render('create');
+    res.render('cube/create');
 
 };
 
