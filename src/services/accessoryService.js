@@ -9,7 +9,7 @@ async function create(name, description, imageUrl) {
 }
 
 async function getAll(){
-    return Accessory.find().lean();
+    return Accessory.find({}).lean();
 }
 
 const accessoryService = {
